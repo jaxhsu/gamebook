@@ -22,7 +22,7 @@ public class Game {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	/** 類型 */
 	@Convert(converter = GameTypeConvert.class)
 	private GameType type;
@@ -34,5 +34,7 @@ public class Game {
 	private Date releaseDate;
 	/** 社團名 */
 	private String circle;
-	
+	/** 是否啟用 */
+	private Boolean enabled = false;
+
 }
